@@ -411,21 +411,32 @@ body::before{
   border-top:1px solid var(--border);padding:14px 0;overflow:hidden;
   opacity:0;animation:fadeIn 0.5s ease 4.0s forwards;
 }
-/* Marquee infini — translate3d force GPU, pas de will-change pour éviter les artefacts */
+/* Marquee infini — 2 blocs identiques, translateX(-50%) sur le track = 1 bloc (raccord invisible) */
 .marquee-track{
   display:flex;
-  width:max-content;           /* largeur = somme exacte des 2 sets */
+  flex-direction:row;
+  flex-wrap:nowrap;
+  align-items:center;
+  gap:0;                       /* aucun gap flex : espacement uniquement via padding des spans */
+  width:max-content;
+  min-width:0;
+  backface-visibility:hidden;
+  -webkit-backface-visibility:hidden;
   animation:marqueeScroll 32s linear infinite;
 }
 .marquee-set{
-  display:flex;align-items:center;
-  flex-shrink:0;white-space:nowrap;
+  display:flex;
+  align-items:center;
+  flex:0 0 auto;               /* largeur = contenu, identique entre les deux copies */
+  flex-shrink:0;
+  min-width:0;
+  white-space:nowrap;
 }
 .marquee-set span{font-size:0.7rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);padding:0 18px;font-weight:500}
-.marquee-set .sep{color:rgba(124,110,248,0.4);padding:0;font-size:0.5rem}
+.marquee-set .sep{color:rgba(124,110,248,0.4);padding:0;font-size:0.5rem;flex-shrink:0}
 @keyframes marqueeScroll{
-  from{transform:translate3d(0,0,0)}
-  to{transform:translate3d(-50%,0,0)} /* exactement 1 set — seamless */
+  0%{transform:translate3d(0,0,0)}
+  100%{transform:translate3d(-50%,0,0)} /* moitié du track = largeur d'un .marquee-set */
 }
 
 /* ============================================================
