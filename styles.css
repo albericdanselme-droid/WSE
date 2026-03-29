@@ -275,7 +275,8 @@ body.cursor-hover .cursor{
   position:relative;min-height:105vh;
   display:flex;flex-direction:column;
   align-items:center;justify-content:center;
-  overflow:hidden;text-align:center;
+  /* visible: évite de couper les italiques Playfair (e, é) en bord de zone */
+  overflow:visible;text-align:center;
   padding:160px 32px 90px;
 }
 
@@ -326,7 +327,7 @@ body::before{
 /* overflow removed — reveal effect uses opacity:0 in from-state, no clip needed */
 .line-wrap{display:block;padding-bottom:0.04em}
 /* Playfair italic descenders (g, y, p) — must set overflow:visible */
-.serif-line{overflow:visible;padding-bottom:0.08em}
+.serif-line{overflow:visible;padding-bottom:0.08em;padding-right:0.04em}
 
 /* Playfair Display pour la ligne italic */
 .serif-line .line-reveal{
@@ -337,6 +338,11 @@ body::before{
   /* display:inline-block élargit la bounding-box aux jambages (g, y, p) */
   display:inline-block;
   padding-bottom:0.22em;
+  /* marge droite/gauche : l’italique déborde — évite le crop du e, é (background-clip) */
+  padding-right:0.28em;
+  padding-left:0.06em;
+  box-decoration-break:clone;
+  -webkit-box-decoration-break:clone;
   background:linear-gradient(120deg,#c084fc 0%,#e879f9 50%,#f9a8d4 100%);
   background-origin:padding-box;     /* gradient couvre toute la box incl. padding */
   -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
