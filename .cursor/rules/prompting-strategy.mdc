@@ -1,0 +1,29 @@
+---
+description: Discipline de prompting — minimiser tokens, maximiser qualité des réponses
+alwaysApply: true
+---
+
+# Stratégie de Prompting — WSE
+
+## Règles pour l'agent
+
+- **Nouveau chat par tâche** : ne pas porter le contexte d'un ancien sujet dans un nouveau
+- **Front-load le contexte** : lire CONTEXT.md en début de session si la tâche est complexe
+- **Vérifier les lints** avant de déclarer une tâche terminée
+- **Zéro TODO dans le code** : chaque fonction produite est complète
+- **Ne pas reformuler** la question de l'utilisateur avant de répondre — aller droit au but
+- **Ne pas annoncer** ce qu'on va faire si on peut directement le faire
+
+## Règles pour les modifications
+
+- Modifier **uniquement les fichiers nécessaires** à la tâche
+- Toute modification de `index.html`, `styles.css` ou `script.js` → déclenche localhost-preview.mdc
+- Toute décision visuelle → déclenche design-role.mdc (inspiration en ligne)
+- Toute création/modification de composant → déclenche mode-equipe.mdc (TOURNAGE)
+
+## Format des réponses
+
+- Réponses en **français** (langue de l'utilisateur)
+- Code : anglais (variables, commentaires)
+- Tables pour synthèses (décisions, phases, changelog)
+- Jamais de bullet points creux ("Bien sûr !", "Absolument !")

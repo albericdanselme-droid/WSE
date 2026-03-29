@@ -1,0 +1,41 @@
+---
+description: Après chaque modification du site WSE, vérifier le serveur et ouvrir le rendu dans le navigateur intégré
+alwaysApply: true
+---
+
+# Règle : Vérification localhost obligatoire
+
+**Après TOUTE modification** de `index.html`, `styles.css` ou `script.js`, tu DOIS :
+
+## 1. Vérifier que le serveur tourne
+
+```powershell
+# Vérifier si le port 3000 est occupé
+netstat -ano | findstr :3000
+```
+
+Si rien ne répond → démarrer le serveur :
+```powershell
+npx http-server "C:\Users\alber\Documents\Cursor\Sites\WSE" -p 3000 -c-1 --cors
+```
+(lancer en tâche de fond avec `block_until_ms: 0`)
+
+## 2. Ouvrir dans le navigateur intégré
+
+Utiliser l'outil `browser_navigate` avec :
+```
+http://127.0.0.1:3000/index.html
+```
+
+## 3. Prendre une capture d'écran
+
+Utiliser `browser_take_screenshot` pour confirmer visuellement que :
+- [ ] Le hero est visible (titre, boutons)
+- [ ] Les cartes services apparaissent
+- [ ] Aucune section n'est vide ou invisible
+
+## 4. Scroller et vérifier
+
+Utiliser `browser_scroll` direction `down` pour vérifier les sections du bas.
+
+**Ne jamais terminer une modification sans avoir confirmé visuellement le résultat.**

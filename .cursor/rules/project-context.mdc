@@ -1,0 +1,20 @@
+---
+description: Contexte permanent du projet WSE — stack, design system, décisions validées
+alwaysApply: true
+---
+
+# Contexte Projet — WSE
+
+**Lire @CONTEXT.md pour le contexte complet.**
+
+## Résumé invariant
+
+- **Projet** : Site web vitrine de WSE (Web Site Entreprise) — agence de création de sites
+- **Fondateur** : Albéric d'Anselme — alberic.wse@gmail.com — 07 66 49 30 36
+- **Stack** : HTML5 · CSS3 (variables, keyframes) · Vanilla JS — aucun framework
+- **Serveur local** : `npx http-server . -p 3000 -c-1 --cors`
+- **Accent couleur** : `#7c6ef8` (violet) — jamais remplacer sans validation
+- **Polices** : Inter (sans) + Cormorant Garamond (serif italic accent)
+- **Langue** : Français (contenu) · Anglais (code/commentaires)
+- **Aucun GSAP** : animations en CSS keyframes pur + JS vanilla uniquement
+- **Règle absolue** : toujours vérifier le rendu sur localhost après modification

@@ -1,0 +1,36 @@
+---
+description: Conventions HTML/CSS/JS pour le site WSE
+globs: "**/*.html, **/*.css, **/*.js"
+alwaysApply: false
+---
+
+# Conventions Web — WSE
+
+## HTML
+- Sémantique : `<section>`, `<nav>`, `<footer>`, `<h1>`→`<h6>` dans l'ordre logique
+- `id` en kebab-case pour les ancres de navigation
+- `aria-label` sur tous les boutons icônes
+- Pas de `style=""` inline sauf pour les variables CSS dynamiques (`--g` dans réalisations)
+
+## CSS
+- Variables dans `:root` pour toutes les valeurs répétées
+- Animations : `cubic-bezier(0.16, 1, 0.3, 1)` pour les ease-out premium
+- Technique text reveal : `overflow:hidden` + `translateY(105%)` → `translateY(0)`
+- `animation-fill-mode: both` pour que l'état initial soit appliqué avant le démarrage
+- Mobile-first : breakpoints 480px → 768px → 1024px
+- Interdit : `!important` sauf responsive overrides justifiés
+
+## JS
+- `'use strict'` en tête de fichier
+- Helpers : `const $ = s => document.querySelector(s)` et `$$ = s => [...document.querySelectorAll(s)]`
+- Événements avec `{ passive: true }` sur scroll/touch
+- Pas de `console.log` en production
+- Garder les fonctions courtes (< 30 lignes idéalement)
+- `requestAnimationFrame` avant les calculs de position DOM
+
+## Interdictions
+- Pas de jQuery
+- Pas de GSAP ou autre lib animation lourde
+- Pas de `document.write`
+- Pas de `eval`
+- Pas de `var` — utiliser `const`/`let`

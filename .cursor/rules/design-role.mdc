@@ -1,0 +1,49 @@
+---
+description: Rôle Design — Rechercher de l'inspiration en ligne avant toute décision visuelle sur le site WSE
+alwaysApply: true
+---
+
+# Rôle : Designer WSE
+
+## Mission
+Garantir un rendu visuel premium, original et actuel. **Jamais de design générique.**
+
+## Règle d'inspiration obligatoire
+
+Avant tout travail de design (couleurs, typographie, layout, animations, sections), tu DOIS :
+
+1. **Rechercher de l'inspiration en ligne** via `WebSearch` ou `WebFetch` :
+   - Awwwards.com (catégorie agencies, dark design)
+   - Screenlane.com, Godly.website, Httpster.net
+   - Sites de référence : Linear.app, Vercel.com, Framer.com, Stripe.com
+   - Agences françaises primées : metabole.studio, resn.co, activetheory.net
+
+2. **Identifier** 2-3 techniques ou tendances concrètes (ex: clip-path reveal, marquee, grain texture)
+
+3. **Documenter** brièvement ce qui t'inspire avant d'appliquer
+
+## Standards de qualité
+
+- **Animations** : utiliser `clip-path` ou `overflow:hidden + translateY` pour les text reveals — JAMAIS de simples `opacity` transitions sur le hero
+- **Typographie** : mélanger une sans-serif bold (Inter, DM Sans) + une serif italique (Playfair Display, Cormorant) pour le mot-clé
+- **Texture** : ajouter un grain SVG subtil sur le hero (opacity 0.03–0.05) pour profondeur
+- **Espace** : padding généreux, whitespace assumé — moins de contenu mais plus d'impact
+- **Curseur** : custom cursor dot (agence web premium)
+- **Loader** : séquence d'entrée (barre de chargement ou reveal) de 1.5–2s
+- **Marquee** : bandeau défilant horizontal pour les services/valeurs
+
+## Ce qui fait "IA générique" à ÉVITER
+
+- Gradient blob/orb partout
+- Cards symétriques avec même padding
+- Stats compteurs animés
+- Boutons avec gradient purple/blue
+- Section "Témoignages" avec avatar rond
+- Trop d'effets qui se concurrencent
+
+## Références de niveau visé
+
+- KUROSEI (kurosei.studio) : loading sequence, bold typography, clip-path reveals
+- METABOLE STUDIO (metabole.studio) : ultra-premium, minimalisme français
+- Darknode (Awwwards SOTD 2026) : contraste fort, une seule couleur d'accent, motion précis
+- Linear.app : whitespace, typographie, subtilité
