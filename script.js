@@ -169,7 +169,7 @@ $$('.filter-btn').forEach(btn => {
 
 /* ===== FORMULAIRE — Web3Forms AJAX ===== */
 /*
- * SETUP : Créez un compte sur https://web3forms.com avec alberic.wse@gmail.com
+ * SETUP : Créez un compte sur https://web3forms.com avec contact@lawse.me
  * Puis remplacez YOUR_ACCESS_KEY dans index.html (champ hidden "access_key")
  * par la clé fournie — chaque soumission vous arrivera directement par email.
  */
@@ -230,7 +230,7 @@ form?.addEventListener('submit', async e => {
     console.error('[WSE Form]', err);
     btn.disabled = false;
     btn.innerHTML = 'Envoyer <i class="fas fa-paper-plane"></i>';
-    alert('Erreur d\'envoi. Contactez-nous directement : alberic.wse@gmail.com');
+    alert('Erreur d\'envoi. Contactez-nous directement : contact@lawse.me');
   }
 });
 

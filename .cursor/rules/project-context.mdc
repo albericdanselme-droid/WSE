@@ -10,7 +10,7 @@ alwaysApply: true
 ## Résumé invariant
 
 - **Projet** : Site web vitrine de WSE (Web Site Entreprise) — agence de création de sites
-- **Fondateur** : Albéric d'Anselme — alberic.wse@gmail.com — 07 66 49 30 36
+- **Fondateur** : Albéric d'Anselme — contact@lawse.me — 07 66 49 30 36
 - **Stack** : HTML5 · CSS3 (variables, keyframes) · Vanilla JS — aucun framework
 - **Serveur local** : `npx http-server . -p 3000 -c-1 --cors`
 - **Accent couleur** : `#7c6ef8` (violet) — jamais remplacer sans validation

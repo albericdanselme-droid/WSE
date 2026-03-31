@@ -10,7 +10,7 @@
 |-------|--------|
 | Nom | WSE — Web Site Entreprise |
 | Fondateur | Albéric d'Anselme |
-| Email | alberic.wse@gmail.com |
+| Email | contact@lawse.me |
 | Téléphone | 07 66 49 30 36 |
 | URL cible | (à définir) |
 | Zone | France |
