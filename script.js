@@ -192,7 +192,7 @@ form?.addEventListener('submit', async e => {
   const msg   = form.querySelector('#msg');
   if (!nom.value.trim() || !email.value.trim() || !tel.value.trim() || !msg.value.trim()) {
     btn.disabled = false;
-    btn.innerHTML = 'Envoyer <i class="fas fa-paper-plane"></i>';
+    btn.innerHTML = 'Créer un compte <i class="fas fa-paper-plane"></i>';
     return;
   }
 
@@ -202,8 +202,8 @@ form?.addEventListener('submit', async e => {
       headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
       body: JSON.stringify({
         access_key:  form.querySelector('[name="access_key"]')?.value || '',
-        subject:     'Nouveau contact WSE — ' + nom.value,
-        from_name:   'WSE Site Web',
+        subject:     'Nouvelle inscription WSE — ' + nom.value,
+        from_name:   'WSE SaaS',
         name:        nom.value,
         email:       email.value,
         phone:       tel.value,
@@ -221,7 +221,7 @@ form?.addEventListener('submit', async e => {
         formOk.classList.remove('visible');
         btn.style.display = '';
         btn.disabled = false;
-        btn.innerHTML = 'Envoyer <i class="fas fa-paper-plane"></i>';
+        btn.innerHTML = 'Créer un compte <i class="fas fa-paper-plane"></i>';
       }, 5000);
     } else {
       throw new Error(json.message || 'Erreur inconnue');
@@ -229,8 +229,8 @@ form?.addEventListener('submit', async e => {
   } catch (err) {
     console.error('[WSE Form]', err);
     btn.disabled = false;
-    btn.innerHTML = 'Envoyer <i class="fas fa-paper-plane"></i>';
-    alert('Erreur d\'envoi. Contactez-nous directement : contact@lawse.me');
+    btn.innerHTML = 'Créer un compte <i class="fas fa-paper-plane"></i>';
+    alert('Erreur d\'envoi. Écrivez-nous directement : contact@lawse.me');
   }
 });
 
